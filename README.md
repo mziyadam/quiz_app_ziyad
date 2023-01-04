@@ -2,7 +2,7 @@
 
 A mini Flutter quiz app.
 ## Download
-[<kbd> <br> Download Here <br> </kbd>][KBD]
+[<kbd> <br> Google Playstore <br> </kbd>][KBD]
 <!---------------------------------------------------------------------------->
 [KBD]: https://play.google.com/store/apps/details?id=com.ziyad.quiz_app_ziyad
 ## Pages
