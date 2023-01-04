@@ -6,6 +6,10 @@ import 'package:quiz_app_ziyad/data/model/result_arguments.dart';
 import 'package:quiz_app_ziyad/ui/style/font.dart';
 import 'package:share_plus/share_plus.dart';
 
+final Uri _downloadUrl = Uri.parse(
+    'https://play.google.com/store/apps/details?id=com.ziyad.quiz_app_ziyad'
+);
+
 class ResultPage extends StatelessWidget {
   static const routeName = '/result';
   late final List<String> myAnswer;
@@ -157,6 +161,6 @@ class ResultPage extends StatelessWidget {
   }
 
   shareScore() {
-    Share.share('I get ${countCorrectness()}/${myQuestion.length} correct in Quiz App.\n Download this app now!');
+    Share.share('I get ${countCorrectness()}/${myQuestion.length} correct in Quiz App.\n Download this app now! $_downloadUrl');
   }
 }

@@ -1,19 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:launch_review/launch_review.dart';
 import 'package:quiz_app_ziyad/data/repository/question_repository.dart';
 import 'package:provider/provider.dart';
 import 'package:quiz_app_ziyad/ui/quiz/page/quiz_page.dart';
 import 'package:quiz_app_ziyad/ui/style/font.dart';
 import 'package:quiz_app_ziyad/ui/topics/page/topics_page.dart';
 import 'package:share_plus/share_plus.dart';
-import 'package:url_launcher/url_launcher.dart';
 
-final Uri _reviewUrl = Uri.parse(
-    // 'https://play.google.com/store/apps/details?id=com.ziyad.quiz_app_ziyad'
-    'https://github.com/mziyadam/quiz_app_ziyad/issues/1'
-);
 final Uri _downloadUrl = Uri.parse(
-    // 'https://play.google.com/store/apps/details?id=com.ziyad.quiz_app_ziyad'
-    'https://github.com/mziyadam/quiz_app_ziyad/'
+    'https://play.google.com/store/apps/details?id=com.ziyad.quiz_app_ziyad'
 );
 
 class HomePage extends StatelessWidget {
@@ -115,9 +110,7 @@ class HomePage extends StatelessWidget {
     print("onShare");
   }
 
-  Future<void> onRateUs() async {
-    if (!await launchUrl(_reviewUrl)) {
-      throw 'Could not launch $_reviewUrl';
-    }
+  void onRateUs() async {
+    LaunchReview.launch(androidAppId: "com.ziyad.quiz_app_ziyad");
   }
 }
