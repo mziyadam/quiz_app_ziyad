@@ -31,6 +31,12 @@ class QuizProvider extends ChangeNotifier {
     }
   }
 
+  @override
+  void dispose() {
+    super.dispose();
+    timer.cancel();
+  }
+
   void determinateIndicator() {
     timer = Timer.periodic(const Duration(seconds: 1), (Timer timer) {
       print(counter);
