@@ -4,7 +4,7 @@ A mini Flutter quiz app.
 ## Download
 [<kbd> <br> Download Here <br> </kbd>][KBD]
 <!---------------------------------------------------------------------------->
-[KBD]: https://github.com/mziyadam/quiz_app_ziyad/raw/master/apk/app-release.apk
+[KBD]: https://play.google.com/store/apps/details?id=com.ziyad.quiz_app_ziyad
 ## Pages
 
 ### Home Page
