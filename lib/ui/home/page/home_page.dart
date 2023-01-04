@@ -5,6 +5,16 @@ import 'package:quiz_app_ziyad/ui/quiz/page/quiz_page.dart';
 import 'package:quiz_app_ziyad/ui/style/font.dart';
 import 'package:quiz_app_ziyad/ui/topics/page/topics_page.dart';
 import 'package:share_plus/share_plus.dart';
+import 'package:url_launcher/url_launcher.dart';
+
+final Uri _reviewUrl = Uri.parse(
+    // 'https://play.google.com/store/apps/details?id=com.ziyad.quiz_app_ziyad'
+    'https://github.com/mziyadam/quiz_app_ziyad/issues/1'
+);
+final Uri _downloadUrl = Uri.parse(
+    // 'https://play.google.com/store/apps/details?id=com.ziyad.quiz_app_ziyad'
+    'https://github.com/mziyadam/quiz_app_ziyad/'
+);
 
 class HomePage extends StatelessWidget {
   static const routeName = '/';
@@ -77,9 +87,7 @@ class HomePage extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: TextButton(
-                    onPressed: () {
-                      onRateUs(context);
-                    },
+                    onPressed: onRateUs,
                     child: Row(
                       children: const [Icon(Icons.star_rate), Text("Rate Us")],
                     )),
@@ -102,12 +110,14 @@ class HomePage extends StatelessWidget {
   }
 
   void onShare(BuildContext context) {
-    Share.share('Download this app now! https://play.google.com/store/apps/details?id=com.ziyad.quiz_app_ziyad');
+    Share.share(
+        'Download this app now! $_downloadUrl');
     print("onShare");
   }
 
-  void onRateUs(BuildContext context) {
-    Share.share('Rate this app now! https://play.google.com/store/apps/details?id=com.ziyad.quiz_app_ziyad');
-    print("onRateUs");
+  Future<void> onRateUs() async {
+    if (!await launchUrl(_reviewUrl)) {
+      throw 'Could not launch $_reviewUrl';
+    }
   }
 }
