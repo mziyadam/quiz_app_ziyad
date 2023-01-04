@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "215229729191",
+    "project_id": "quiz-app-ziyad",
+    "storage_bucket": "quiz-app-ziyad.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:215229729191:android:d4adc5c57131af021f4e82",
+        "android_client_info": {
+          "package_name": "com.ziyad.quiz_app_ziyad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "215229729191-clsp8vdq4p7tuu102ooutkjl3itfoo39.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDoa2NfQ0rwHoo-gOoQU16aZMzWX2xhqas"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "215229729191-clsp8vdq4p7tuu102ooutkjl3itfoo39.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
