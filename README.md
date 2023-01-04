@@ -2,7 +2,7 @@
 
 A mini Flutter quiz app.
 
-## Screens
+## Pages
 
 ### Home Page
 <p align="start">
