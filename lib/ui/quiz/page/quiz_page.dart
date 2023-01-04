@@ -153,31 +153,34 @@ class _QuizPageState extends State<QuizPage> {
                                         .choices
                                         ?.length,
                                     itemBuilder: (context, choiceIndex) {
-                                      return ElevatedButton(
-                                        style: ElevatedButton.styleFrom(
-                                          shape: RoundedRectangleBorder(
-                                            borderRadius:
-                                                BorderRadius.circular(20.0),
+                                      return Padding(
+                                        padding: const EdgeInsets.all(8.0),
+                                        child: ElevatedButton(
+                                          style: ElevatedButton.styleFrom(
+                                            shape: RoundedRectangleBorder(
+                                              borderRadius:
+                                                  BorderRadius.circular(20.0),
+                                            ),
+                                            minimumSize:
+                                                const Size.fromHeight(10), // NEW
                                           ),
-                                          minimumSize:
-                                              const Size.fromHeight(10), // NEW
-                                        ),
-                                        onPressed: () => {
-                                          data.saveAnswer(data
-                                              .questions[
-                                                  data.currentQuestionCount - 1]
-                                              .choices![choiceIndex])
-                                        },
-                                        child: Padding(
-                                          padding: const EdgeInsets.all(8.0),
-                                          child: Text(
-                                            data
+                                          onPressed: () => {
+                                            data.saveAnswer(data
                                                 .questions[
-                                                    data.currentQuestionCount -
-                                                        1]
-                                                .choices![choiceIndex],
-                                            style: textTheme.bodyText2,
-                                            textAlign: TextAlign.center,
+                                                    data.currentQuestionCount - 1]
+                                                .choices![choiceIndex])
+                                          },
+                                          child: Padding(
+                                            padding: const EdgeInsets.all(8.0),
+                                            child: Text(
+                                              data
+                                                  .questions[
+                                                      data.currentQuestionCount -
+                                                          1]
+                                                  .choices![choiceIndex],
+                                              style: textTheme.bodyText2,
+                                              textAlign: TextAlign.center,
+                                            ),
                                           ),
                                         ),
                                       );
