@@ -4,6 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:quiz_app_ziyad/ui/quiz/page/quiz_page.dart';
 import 'package:quiz_app_ziyad/ui/style/font.dart';
 import 'package:quiz_app_ziyad/ui/topics/page/topics_page.dart';
+import 'package:share_plus/share_plus.dart';
 
 class HomePage extends StatelessWidget {
   static const routeName = '/';
@@ -101,10 +102,12 @@ class HomePage extends StatelessWidget {
   }
 
   void onShare(BuildContext context) {
+    Share.share('Download this app now! https://play.google.com/store/apps/details?id=com.ziyad.quiz_app_ziyad');
     print("onShare");
   }
 
   void onRateUs(BuildContext context) {
+    Share.share('Rate this app now! https://play.google.com/store/apps/details?id=com.ziyad.quiz_app_ziyad');
     print("onRateUs");
   }
 }
