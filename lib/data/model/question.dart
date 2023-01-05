@@ -28,6 +28,7 @@ class Question {
           data?['choices'] is Iterable ? List.from(data?['choices']) : null,
     );
   }
+
   factory Question.fromNonDataFirestore(
     Map<String, dynamic> snapshotMap,
   ) {
@@ -37,8 +38,7 @@ class Question {
       question: data['question'],
       questionImg: data['questionImg'],
       answer: data['answer'],
-      choices:
-          data['choices'] is Iterable ? List.from(data['choices']) : null,
+      choices: data['choices'] is Iterable ? List.from(data['choices']) : null,
     );
   }
 

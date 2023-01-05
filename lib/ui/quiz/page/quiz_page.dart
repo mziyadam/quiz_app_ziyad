@@ -19,7 +19,6 @@ class QuizPage extends StatefulWidget {
 }
 
 class _QuizPageState extends State<QuizPage> {
-
   @override
   Widget build(BuildContext context) {
     final ButtonStyle style = TextButton.styleFrom(
@@ -75,7 +74,8 @@ class _QuizPageState extends State<QuizPage> {
                           child: Column(
                             children: [
                               Padding(
-                                padding: const EdgeInsets.fromLTRB(16.0,0.0,16.0,16.0),
+                                padding: const EdgeInsets.fromLTRB(
+                                    16.0, 0.0, 16.0, 16.0),
                                 child: Card(
                                     child: Padding(
                                   padding: const EdgeInsets.all(8.0),
@@ -161,13 +161,14 @@ class _QuizPageState extends State<QuizPage> {
                                               borderRadius:
                                                   BorderRadius.circular(20.0),
                                             ),
-                                            minimumSize:
-                                                const Size.fromHeight(10), // NEW
+                                            minimumSize: const Size.fromHeight(
+                                                10), // NEW
                                           ),
                                           onPressed: () => {
                                             data.saveAnswer(data
                                                 .questions[
-                                                    data.currentQuestionCount - 1]
+                                                    data.currentQuestionCount -
+                                                        1]
                                                 .choices![choiceIndex])
                                           },
                                           child: Padding(

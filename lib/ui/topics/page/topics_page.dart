@@ -29,7 +29,7 @@ class TopicsPage extends StatelessWidget {
               return ListView.builder(
                 itemBuilder: (context, index) {
                   return Padding(
-                    padding: const EdgeInsets.only(left: 8.0,right: 8.0),
+                    padding: const EdgeInsets.only(left: 8.0, right: 8.0),
                     child: TextButton(
                       onPressed: () {
                         Navigator.pushNamed(

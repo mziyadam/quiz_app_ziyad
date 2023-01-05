@@ -4,5 +4,5 @@ class ResultArguments {
   final List<String> myAnswer;
   final List<Question> myQuestion;
 
-  ResultArguments({required this.myAnswer,required this.myQuestion});
+  ResultArguments({required this.myAnswer, required this.myQuestion});
 }

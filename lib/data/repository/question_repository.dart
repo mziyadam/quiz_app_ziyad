@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:quiz_app_ziyad/data/model/question.dart';
 
@@ -151,7 +149,7 @@ class QuestionRepository {
         var l = List.generate(allQuestions.length, (i) => i);
         l.shuffle();
         print(l);
-        for(int i=0;i<5;i++){
+        for (int i = 0; i < 5; i++) {
           questions.add(allQuestions[l[i]]);
         }
         return questions;

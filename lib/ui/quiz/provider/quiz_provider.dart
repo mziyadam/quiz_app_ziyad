@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter/foundation.dart';
 import 'package:quiz_app_ziyad/data/model/question.dart';
 import 'package:quiz_app_ziyad/data/repository/question_repository.dart';
@@ -39,7 +38,6 @@ class QuizProvider extends ChangeNotifier {
 
   void determinateIndicator() {
     timer = Timer.periodic(const Duration(seconds: 1), (Timer timer) {
-      print(counter);
       try {
         if (counter == 0) {
           saveAnswer("No Answer");
@@ -47,7 +45,7 @@ class QuizProvider extends ChangeNotifier {
           counter--;
           notifyListeners();
         }
-      }catch(e){
+      } catch (e) {
         // print(e);
       }
     });
